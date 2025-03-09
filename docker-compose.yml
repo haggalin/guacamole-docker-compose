@@ -164,3 +164,15 @@ services:
    networks:
      - guacnetwork_compose
 ####################################################################################
+
+  # Setup this machine: https://akhilsharmaa.medium.com/ubuntu-gui-inside-docker-vnc-server-setup-f601687ec66d
+  ubuntu16:
+    container_name: ubuntu16_compose
+    build:
+      context: ubuntu16/
+    ports:
+      - "2022:22"
+      - "5901:5901"
+    networks:
+     - guacnetwork_compose
+
